@@ -8,7 +8,7 @@ import GatsbyLogo from "../images/gatsby.svg"
 import NextLogo from "../images/next.svg"
 import * as style from "../styles/index.module.scss"
 
-const Index = props => {
+const Index = () => {
   return (
     <Layout>
       <div className={style.hero}>
@@ -29,7 +29,7 @@ const Index = props => {
         <div className={style.company}>
           <div>
             <h2>弊社について</h2>
-            <p>Last Update: {props.data.contentfullLastupdate.lastupdate}</p>
+            <p>Last Update:</p>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -82,10 +82,10 @@ const Index = props => {
 
 export default Index
 
-export const query = graphql`
-  query IndexQuery {
-    contentfulLastupdate {
-      lastupdate(formatString: "YYYY-MM-DD")
-    }
-  }
-`
+// export const query = graphql`
+//   query IndexQuery {
+//     contentfulLastupdate {
+//       lastupdate(formatString: "YYYY-MM-DD")
+//     }
+//   }
+// `
